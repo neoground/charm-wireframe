@@ -32,7 +32,7 @@ class User extends Model
      */
     public static function getDefaultUser()
     {
-        return self::where('email', 'system')->first();
+        return self::where('username', 'system')->first();
     }
     
 }

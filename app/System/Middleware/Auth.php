@@ -5,7 +5,6 @@
 
 namespace App\System\Middleware;
 
-use App\Models\AppToken;
 use Charm\Vivid\Charm;
 use Charm\Vivid\Kernel\Output\Json;
 
