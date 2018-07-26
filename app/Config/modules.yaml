@@ -1,0 +1,16 @@
+# --------------------------------------------- #
+#                                               #
+# MODULES.YAML                                  #
+#                                               #
+# In this file you define all additional        #
+# modules which should be loaded.               #
+#                                               #
+# Just provide the class name of the module     #
+# binding with full namespace.                  #
+#                                               #
+# --------------------------------------------- #
+
+modules:
+  - \Charm\DebugBar\DebugBar
+  - \Charm\DataExporter\DataExporter
+  - \Charm\Crown\Crown

@@ -1,0 +1,23 @@
+{
+  "name": "neoground/charm-wireframe",
+  "description": "Charm Wireframe",
+  "homepage": "https://charm.neoground.com",
+  "authors": [
+    {
+      "name": "Sven Reifschneider",
+      "email": "hello@neoground.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "neoground/charm": "*",
+    "twig/twig": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable" : true
+}

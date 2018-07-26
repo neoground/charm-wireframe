@@ -1,0 +1,48 @@
+# --------------------------------------------- #
+#                                               #
+# CONNECTIONS.YAML                              #
+#                                               #
+# In this file you define all connections       #
+# to databases and external sources.            #
+#                                               #
+# --------------------------------------------- #
+
+# SQL Database
+# ---------------------------------------------
+database:
+  # Should the database connection be enabled?
+  enabled:   false
+  # Type of database
+  driver:    mysql
+  # Authentication
+  host:      'localhost'
+  username:  ''
+  password:  ''
+  # Database
+  database:  'charm'
+  prefix:    'charm_'
+  charset:   utf8mb4
+  collation: utf8mb4_unicode_ci
+
+# Redis
+# ---------------------------------------------
+redis:
+  # Should redis be enabled?
+  enabled: false
+  scheme: tcp
+  # Authentication
+  host: '127.0.0.1'
+  port: 6379
+  password: ''
+  # Prefix for all stored keys
+  prefix: ch_
+  # Persistent connection
+  persistent: true
+
+# E-Mail SMTP
+# ---------------------------------------------
+emails:
+  default:
+    type:     sendmail
+    fromname: 'Charm'
+    frommail: 'info@example.com'

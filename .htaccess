@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ index.php [QSA,L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+# Prevent direct access to certain files
+<FilesMatch ^(composer|package)\.json$|\.(yml|yaml|twig|log|lock|cache|php)$>
+    Deny from all
+</FilesMatch>
+
+# Only index.php is allowed to be executed
+<FilesMatch "^(index\.php)?$">
+    Allow from all
+</FilesMatch>

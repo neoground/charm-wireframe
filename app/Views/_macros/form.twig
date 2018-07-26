@@ -1,0 +1,125 @@
+{#
+
++-------------------------------------+
+|             FORM MACROS             |
++-------------------------------------+
+
+Based on: https://gist.github.com/iamkirkbater/970c354aa73302448f647676b83e52f7
+Thank you, iamkirkbater!
+
+Usage:
+{% import "_macros/form.twig" as form %}
+
+Then use a macro like {{ form.MACRONAME(params...) }}
+
+#}
+
+{% macro input(name, value, type, attributes) %}
+    <input name="{{ name }}" type="{{ type }}" value="{{ value }}"{% for attr, value in attributes %} {{ attr }}="{{ value }}"{% endfor %}{% if not attributes.id is defined %} id="{{ name }}"{% endif %}/>
+{% endmacro %}
+
+{% macro text(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "text", attributes) }}
+{% endmacro %}
+
+{% macro password(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "password", attributes) }}
+{% endmacro %}
+
+{% macro email(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "email", attributes) }}
+{% endmacro %}
+
+{% macro color(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "color", attributes) }}
+{% endmacro %}
+
+{% macro button(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "button", attributes) }}
+{% endmacro %}
+
+{% macro date(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "date", attributes) }}
+{% endmacro %}
+
+{% macro file(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "file", attributes) }}
+{% endmacro %}
+
+{% macro hidden(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "hidden", attributes) }}
+{% endmacro %}
+
+{% macro month(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "month", attributes) }}
+{% endmacro %}
+
+{% macro number(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "number", attributes) }}
+{% endmacro %}
+
+{% macro range(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "range", attributes) }}
+{% endmacro %}
+
+{% macro search(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "search", attributes) }}
+{% endmacro %}
+
+{% macro tel(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "tel", attributes) }}
+{% endmacro %}
+
+{% macro time(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "time", attributes) }}
+{% endmacro %}
+
+{% macro url(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "url", attributes) }}
+{% endmacro %}
+
+{% macro week(name, value, attributes) %}
+    {% from _self import input %}
+    {{ input(name, value, "week", attributes) }}
+{% endmacro %}
+
+{% macro textarea(name, value, attributes) %}
+    <textarea name="{{ name }}"{% for attr, value in attributes %} {{ attr }}="{{ value }}"{% endfor %}{% if not attributes.id is defined %} id="{{ name }}"{% endif %}>{{ value|e }}</textarea>
+{% endmacro %}
+
+{% macro label(id, content, attributes) %}
+    <label for="{{ id }}"{% for attr, value in attributes %} {{ attr }}="{{ value }}"{% endfor %}>{{ content|e }}</label>
+{% endmacro %}
+
+{% macro checkbox(name, value, id, attributes) %}
+    <input type="checkbox" name="{{ name }}" id="{{ id|default(name) }}" class="{{ class }}" value="1"{% if value %} checked="checked"{% endif %}{% for attr, value in attributes %} {{ attr }}="{{ value }}"{% endfor %} />
+{% endmacro %}
+
+{% macro select(name, values, value, attributes) %}
+    <select name="{{ name }}"{% for attr, value in attributes %} {{ attr }}="{{ value }}"{% endfor %}{% if not attributes.id is defined %} id="{{ name }}"{% endif %}>
+    {% for key, name in values %}
+        <option value="{{ key }}"{% if value == key %} selected="selected"{% endif %}>{{ name }}</option>
+    {% endfor %}
+    </select>
+{% endmacro %}
+
+{% macro radio(name, values, value, attributes) %}
+    {% for key, label in values %}
+        <label{% if value == key %} class="selected"{% endif %} ><input type="radio" name="{{ name }}" value="{{ key }}"{% if value == key %} checked="checked"{% endif %}{% for attr, value in attributes %} {{ attr }}="{{ value }}"{% endfor %}{% if not attributes.id is defined %} id="{{ name }}"{% endif %}> {{ label }}</label>
+    {% endfor %}
+{% endmacro %}

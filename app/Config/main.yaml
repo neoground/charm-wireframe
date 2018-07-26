@@ -1,0 +1,59 @@
+# --------------------------------------------- #
+#                                               #
+# MAIN.YAML                                     #
+#                                               #
+# In this file you define the main config       #
+# of your application.                          #
+#                                               #
+# --------------------------------------------- #
+
+# Logging
+# ---------------------------------------------
+logging:
+  enabled: true
+  # Wanted log level: debug, info,
+  level: debug
+
+# Session
+# ---------------------------------------------
+session:
+  # Expiration in minutes
+  expire: 1440
+  # Name of session
+  name: charm
+
+# Localization
+# ---------------------------------------------
+local:
+  timezone:  Europe/Berlin
+  language:  de_DE.utf8
+  shortlang: de
+  # Timestamps for displaying
+  timestamps:
+    date:          '%d. %B %Y'
+    dateshort:     '%d.%m.%Y'
+    datetimeshort: '%d.%m.%Y %H:%M'
+  # Text formatting
+  formatting:
+    decimal: ','
+    thousands: '.'
+
+# Debug
+# ---------------------------------------------
+debug:
+  # Debug mode?
+  debugmode: true
+  # Show debug bar on views
+  show_debugbar: true
+
+# Output
+# ---------------------------------------------
+output:
+  # JSON output
+  json:
+    # Output json formatted in multiple lines (true) or in single line (false)?
+    pretty: true
+  # Error style (default, view, json, exception)
+  error_style: view
+  # Error view template
+  error_view: '_base.error'

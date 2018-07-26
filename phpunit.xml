@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         backupGlobals="false"
+         verbose="true">
+    <testsuites>
+        <testsuite name="core">
+            <directory suffix="Test.php">tests/core</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <const name="PHPUNIT_TESTSUITE" value="true"/>
+    </php>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src/</directory>
+            <exclude>
+                <directory suffix=".php">vendor/</directory>
+                <file>bob.php</file>
+                <file>index.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>
