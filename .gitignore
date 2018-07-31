@@ -1,7 +1,8 @@
-# Custom
+# Charm framework
 /app/Config/Environments/Local/*
 /var/cache/*
 /var/logs/*
+/app/app.env
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Vim template
