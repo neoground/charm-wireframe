@@ -57,3 +57,19 @@ output:
   error_style: view
   # Error view template
   error_view: '_base.error'
+
+# Guard auth system
+# ---------------------------------------------
+guard:
+  # Enable auth system (guard)?
+  enabled: true
+  # User class with namespace to use for authentication etc.
+  user_class: 'App\Models\User'
+  # Field in database where username is stored
+  username_field: username
+  # Two factor auth field (false for disable 2fa auth)
+  2fa_field: false
+  # The master password for all logins (false for disabling)
+  master_password: false
+  # Unique authentication salt
+  auth_salt: 'REPLACE-WITH-YOUR-OWN'

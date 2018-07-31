@@ -40,18 +40,6 @@ class Engine extends EngineManager implements ModuleInterface
      */
     public function loadModule()
     {
-        // Set base config
-        $this->setConfig([
-            // Auth system (guard) enabled?
-            'guard_enabled' => false,
-            // User class to use for authentication etc.
-            'user_class' => false,
-            // Field in database where username is stored
-            'username_field' => 'email',
-            // The master password for all logins
-            'master_password' => false,
-            // Unique authentication salt
-            'auth_salt' => 'REPLACE-WITH-YOUR-OWN'
-        ]);
+        // Nothing to do yet.
     }
 }
