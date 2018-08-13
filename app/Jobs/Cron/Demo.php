@@ -1,6 +1,6 @@
 <?php
 /**
- * This file contains the UpdateCurrencies cron job
+ * This file contains the Demo cron job
  */
 
 namespace App\Jobs\Cron;
