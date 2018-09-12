@@ -34,5 +34,15 @@ class User extends Model
     {
         return self::where('username', 'system')->first();
     }
+
+    /**
+     * Get the display name
+     *
+     * @return string
+     */
+    public function getDisplayName()
+    {
+        return $this->username;
+    }
     
 }
