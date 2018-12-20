@@ -13,6 +13,8 @@ logging:
   enabled: true
   # Wanted log level: debug, info,
   level: debug
+  # Also log php errors (instead of default log file)?
+  errors: true
 
 # Session
 # ---------------------------------------------
