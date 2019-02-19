@@ -29,6 +29,8 @@ database:
 redis:
   # Should redis be enabled?
   enabled: false
+  # Driver to use: phpredis (only used if available), predis
+  driver: phpredis
   scheme: tcp
   # Authentication
   host: '127.0.0.1'
