@@ -69,9 +69,17 @@ guard:
   user_class: 'App\Models\User'
   # Field in database where username is stored
   username_field: username
+  # Location of API token. Can be field of user table of Token class
+  token_location: api_token
   # Two factor auth field (false for disable 2fa auth)
   2fa_field: false
   # The master password for all logins (false for disabling)
   master_password: false
   # Unique authentication salt
   auth_salt: 'REPLACE-WITH-YOUR-OWN'
+
+# BarBeQueue queue system
+
+bbq:
+  # Name prefix for redis keys
+  name: charm-bbq

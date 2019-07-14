@@ -11,7 +11,7 @@ use Illuminate\Database\Schema\Blueprint;
 /**
  * Migration class
  */
-class Users extends Migration
+class UsersTable extends Migration
 {
     /** @var string the table name */
     protected $tablename = 'users';
