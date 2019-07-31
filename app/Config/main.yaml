@@ -47,6 +47,8 @@ debug:
   debugmode: true
   # Show debug bar on views
   show_debugbar: true
+  # Display exception instead of error_style when in debug mode? (default: true)
+  exceptions: true
 
 # Output
 # ---------------------------------------------
