@@ -23,6 +23,7 @@ database:
   prefix:    'charm_'
   charset:   utf8mb4
   collation: utf8mb4_unicode_ci
+  caching:   true
 
 # Redis
 # ---------------------------------------------
