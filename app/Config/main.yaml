@@ -11,10 +11,12 @@
 # ---------------------------------------------
 logging:
   enabled: true
-  # Wanted log level: debug, info,
+  # Wanted log level: debug, info, notice, warning, error, critical, alert, emergency
   level: debug
   # Also log php errors (instead of default log file)?
   errors: true
+  # Chmod for log files (optional)
+  file_permissions: 0664
 
 # Session
 # ---------------------------------------------

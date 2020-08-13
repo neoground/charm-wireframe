@@ -37,6 +37,9 @@ class UsersTable extends Migration
                 // API token
                 $table->string('api_token')->nullable();
 
+                $table->dateTime('last_login')->nullable();
+                $table->boolean('enabled')->default(0);
+
                 $table->timestamps();
                 $table->softDeletes();
             });
