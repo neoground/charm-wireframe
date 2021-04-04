@@ -49,8 +49,18 @@ debug:
   debugmode: true
   # Show debug bar on views
   show_debugbar: true
+  # Log debugbar data for a history
+  log_debugbar: true
   # Display exception instead of error_style when in debug mode? (default: true)
   exceptions: true
+
+# Storage
+# ---------------------------------------------
+storages:
+  # var and data are already available. Add your own ones
+  sample:
+    type: 'local'
+    path: ''
 
 # Output
 # ---------------------------------------------
