@@ -58,9 +58,9 @@ debug:
 # ---------------------------------------------
 storages:
   # var and data are already available. Add your own ones
-  sample:
-    type: 'local'
-    path: ''
+  #sample:
+  #  type: 'local'
+  #  path: ''
 
 # Output
 # ---------------------------------------------

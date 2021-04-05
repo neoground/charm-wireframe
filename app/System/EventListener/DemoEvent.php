@@ -29,7 +29,7 @@ class DemoEvent extends EventListener
     /**
      * Event execution
      */
-    protected function fire()
+    public function fire()
     {
         Charm::Logging()->info('Demo Event fired');
     }

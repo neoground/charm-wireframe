@@ -26,6 +26,7 @@ class UsersTable extends Migration
                 $table->increments('id');
 
                 // Basic fields
+                $table->string('username');
                 $table->string('email');
                 $table->string('password');
                 $table->string('secret', 128)->nullable(); // 2FA secret
