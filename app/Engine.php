@@ -5,9 +5,10 @@
 
 namespace App;
 
-use App\Models\User;
+use App\System\Middleware\Auth;
 use Charm\Vivid\Kernel\EngineManager;
 use Charm\Vivid\Kernel\Interfaces\ModuleInterface;
+use Charm\Vivid\Router\Elements\Filter;
 
 /**
  * Class Engine
@@ -40,6 +41,7 @@ class Engine extends EngineManager implements ModuleInterface
      */
     public function loadModule()
     {
-        // Nothing to do yet.
+        // Add route filters
+        Filter::add('auth', Auth::class . "::checkAuth");
     }
 }

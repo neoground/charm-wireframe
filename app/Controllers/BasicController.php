@@ -7,6 +7,7 @@ namespace App\Controllers;
 
 use Charm\Vivid\Controller;
 use Charm\Vivid\Kernel\Output\View;
+use Charm\Vivid\Router\Attributes\Route;
 
 /**
  * Class BasicController
@@ -17,14 +18,16 @@ use Charm\Vivid\Kernel\Output\View;
  */
 class BasicController extends Controller
 {
-    /**
-     * Show index.
-     *
-     * @route index
-     *
-     * @return View
-     */
-    public function getIndex()
+    #[Route("GET", "/", "index")]
+    public function getIndex() : View
+    {
+        return View::make('index')->with([
+
+        ]);
+    }
+
+    #[Route("GET", "/", "restricted", "auth")]
+    public function getRestricted() : View
     {
         return View::make('index')->with([
 
