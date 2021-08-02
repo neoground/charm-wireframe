@@ -53,6 +53,12 @@ debug:
   log_debugbar: true
   # Display exception instead of error_style when in debug mode? (default: true)
   exceptions: true
+  # The local base path to the project for Whoops page
+  base_path: '/home/foobar/projects/Charm'
+  # The editor to open files in for Whoops page
+  # Available: sublime, textmate, emacs, macvim, phpstorm, idea,
+  #            vscode, atom, espresso, xdebug, netbeans
+  editor: atom
 
 # Storage
 # ---------------------------------------------
