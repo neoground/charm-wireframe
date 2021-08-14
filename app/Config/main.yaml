@@ -97,6 +97,8 @@ guard:
   master_password: false
   # Unique authentication salt
   auth_salt: 'REPLACE-WITH-YOUR-OWN'
+  # The route to redirect to in case of no auth ("guard:auth" route filter)
+  no_auth_route: no_auth
 
 # BarBeQueue queue system
 
