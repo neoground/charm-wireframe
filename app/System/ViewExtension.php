@@ -13,7 +13,7 @@ use Twig\TwigFunction;
  *
  * Adding view functions to twig views and much more!
  *
- * @package Charm\Vivid\Helper
+ * @package App\System
  */
 class ViewExtension extends AbstractExtension
 {
