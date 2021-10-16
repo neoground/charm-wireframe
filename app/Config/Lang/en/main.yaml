@@ -1,0 +1,4 @@
+# English translation file
+# Access it via C::Formatter()->translate('main:demo.hello', ['name' => 'Duke']) -> Hey Duke
+demo:
+  hello: Hey {name}

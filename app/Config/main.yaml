@@ -25,6 +25,8 @@ session:
   expire: 1440
   # Name of session
   name: charm
+  # Default language for translations
+  default_language: en
 
 # Localization
 # ---------------------------------------------

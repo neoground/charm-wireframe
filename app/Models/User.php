@@ -76,5 +76,18 @@ class User extends Model
     {
         return $this->username;
     }
+
+    /**
+     * Get language string of user
+     *
+     * This will be used on login via Guard and automatically set the
+     * language based on the user's settings
+     *
+     * @return string
+     */
+    public function getLanguage()
+    {
+        return 'en';
+    }
     
 }
