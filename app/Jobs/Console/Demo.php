@@ -34,11 +34,11 @@ class Demo extends Command
      * @param InputInterface   $input
      * @param OutputInterface  $output
      *
-     * @return bool
+     * @return int
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln("Hello world!");
-        return true;
+        return self::SUCCESS;
     }
 }

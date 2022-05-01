@@ -35,10 +35,11 @@ local:
   language:  de_DE.utf8
   shortlang: de
   # Timestamps for displaying
+  # Format: https://momentjs.com/docs/#/displaying/format/
   timestamps:
-    date:          '%d. %B %Y'
-    dateshort:     '%d.%m.%Y'
-    datetimeshort: '%d.%m.%Y %H:%M'
+    date:          'DD. MMMM YYYY'
+    dateshort:     'DD.MM.YY'
+    datetimeshort: 'DD.MM.YYYY HH:mm'
   # Text formatting
   formatting:
     decimal: ','
