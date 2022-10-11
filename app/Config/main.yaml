@@ -94,7 +94,7 @@ guard:
   username_field: username
   # Location of API token. Can be field of user table of Token class
   token_location: api_token
-  # Two factor auth field (false for disable 2fa auth)
+  # Two-factor auth field (false for disable 2fa auth)
   2fa_field: false
   # The master password for all logins (false for disabling)
   master_password: false
@@ -103,8 +103,16 @@ guard:
   # The route to redirect to in case of no auth ("guard:auth" route filter)
   no_auth_route: no_auth
 
-# BarBeQueue queue system
+# Request specific
+# ---------------------------------------------
+request:
+  # Force HTTPS in URL generation, even if HTTP request was detected?
+  force_https: false
+  # Base URL to index as fallback
+  base_url: https://example.com
 
+# BarBeQueue queue system
+# ---------------------------------------------
 bbq:
   # Name prefix for redis keys
   name: charm-bbq
