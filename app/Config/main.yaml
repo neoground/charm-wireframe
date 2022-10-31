@@ -1,25 +1,22 @@
-# --------------------------------------------- #
-#                                               #
-# MAIN.YAML                                     #
-#                                               #
-# In this file you define the main config       #
-# of your application.                          #
-#                                               #
-# --------------------------------------------- #
+# +-------------------------------------------------------------------------+
+# |    main.yaml                                  App main configuration    |
+# +-------------------------------------------------------------------------+
 
-# Logging
-# ---------------------------------------------
+# ---------------------------------------------------------------------------
+# :: Logging
+# ---------------------------------------------------------------------------
 logging:
   enabled: true
-  # Wanted log level: debug, info, notice, warning, error, critical, alert, emergency
+  # Level: debug, info, notice, warning, error, critical, alert, emergency
   level: debug
   # Also log php errors (instead of default log file)?
   errors: true
   # Chmod for log files (optional)
   file_permissions: 0664
 
-# Session
-# ---------------------------------------------
+# ---------------------------------------------------------------------------
+# :: Session
+# ---------------------------------------------------------------------------
 session:
   # Expiration in minutes
   expire: 1440
@@ -28,8 +25,9 @@ session:
   # Default language for translations
   default_language: en
 
-# Localization
-# ---------------------------------------------
+# ---------------------------------------------------------------------------
+# :: Localization
+# ---------------------------------------------------------------------------
 local:
   timezone:  Europe/Berlin
   language:  de_DE.utf8
@@ -40,21 +38,22 @@ local:
     date:          'DD. MMMM YYYY'
     dateshort:     'DD.MM.YY'
     datetimeshort: 'DD.MM.YYYY HH:mm'
-  # Text formatting
+  # Text formatting of numbers
   formatting:
     decimal: ','
     thousands: '.'
 
-# Debug
-# ---------------------------------------------
+# ---------------------------------------------------------------------------
+# :: Debug
+# ---------------------------------------------------------------------------
 debug:
-  # Debug mode?
-  debugmode: true
+  # Debug mode activated?
+  debugmode: false
   # Show debug bar on views
-  show_debugbar: true
+  show_debugbar: false
   # Log debugbar data for a history
-  log_debugbar: true
-  # Display exception instead of error_style when in debug mode? (default: true)
+  log_debugbar: false
+  # Display exception instead of error_style when in debug mode?
   exceptions: true
   # The local base path to the project for Whoops page
   base_path: '/home/foobar/projects/Charm'
@@ -63,28 +62,31 @@ debug:
   #            vscode, atom, espresso, xdebug, netbeans
   editor: atom
 
-# Storage
-# ---------------------------------------------
+# ---------------------------------------------------------------------------
+# :: Storage
+# ---------------------------------------------------------------------------
 storages:
   # var and data are already available. Add your own ones
   #sample:
   #  type: 'local'
   #  path: ''
 
+# ---------------------------------------------------------------------------
 # Output
-# ---------------------------------------------
+# ---------------------------------------------------------------------------
 output:
   # JSON output
   json:
-    # Output json formatted in multiple lines (true) or in single line (false)?
+    # Output json formatted in multiple lines (true) or in single line?
     pretty: true
   # Error style (default, view, json, exception)
   error_style: view
   # Error view template
   error_view: '_base.error'
 
+# ---------------------------------------------------------------------------
 # Guard auth system
-# ---------------------------------------------
+# ---------------------------------------------------------------------------
 guard:
   # Enable auth system (guard)?
   enabled: true
@@ -103,16 +105,18 @@ guard:
   # The route to redirect to in case of no auth ("guard:auth" route filter)
   no_auth_route: no_auth
 
+# ---------------------------------------------------------------------------
 # Request specific
-# ---------------------------------------------
+# ---------------------------------------------------------------------------
 request:
   # Force HTTPS in URL generation, even if HTTP request was detected?
   force_https: false
   # Base URL to index as fallback
   base_url: https://example.com
 
+# ---------------------------------------------------------------------------
 # BarBeQueue queue system
-# ---------------------------------------------
+# ---------------------------------------------------------------------------
 bbq:
   # Name prefix for redis keys
   name: charm-bbq

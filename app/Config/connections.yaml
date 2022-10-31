@@ -1,14 +1,15 @@
-# --------------------------------------------- #
-#                                               #
-# CONNECTIONS.YAML                              #
-#                                               #
-# In this file you define all connections       #
-# to databases and external sources.            #
-#                                               #
-# --------------------------------------------- #
+# +-------------------------------------------------------------------------+
+# |    connections.yaml                         Defining all connections    |
+# +-------------------------------------------------------------------------+
+# |                                                                         |
+# |  In this file you define all connections to databases                   |
+# |  and other external sources and systems, like redis.                    |
+# |                                                                         |
+# +-------------------------------------------------------------------------+
 
-# SQL Database
-# ---------------------------------------------
+# ---------------------------------------------------------------------------
+# :: SQL Database
+# ---------------------------------------------------------------------------
 database:
   # Should the database connection be enabled?
   enabled:   false
@@ -25,8 +26,9 @@ database:
   collation: utf8mb4_unicode_ci
   caching:   true
 
-# Redis
-# ---------------------------------------------
+# ---------------------------------------------------------------------------
+# :: Redis
+# ---------------------------------------------------------------------------
 redis:
   # Should redis be enabled?
   enabled: false
@@ -42,10 +44,24 @@ redis:
   # Persistent connection
   persistent: true
 
-# E-Mail SMTP
-# ---------------------------------------------
+# ---------------------------------------------------------------------------
+# :: Email SMTP / API
+# ---------------------------------------------------------------------------
 emails:
   default:
+    driver: Smtp
+    host: example.com
+    port: 587
+    auth: true
+    authtype: login
+    username: info@example.com
+    password: 'S3cr3tP455w0rD!'
+    usetls: true
+    usessl: false
+    trustall: false
+    fromname: 'Charm Framework'
+    frommail: info@example.com
+  local:
     type:     sendmail
-    fromname: 'Charm'
+    fromname: 'Charm Framework'
     frommail: 'info@example.com'

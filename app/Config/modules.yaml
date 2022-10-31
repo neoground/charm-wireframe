@@ -1,14 +1,12 @@
-# --------------------------------------------- #
-#                                               #
-# MODULES.YAML                                  #
-#                                               #
-# In this file you define all additional        #
-# modules which should be loaded.               #
-#                                               #
-# Just provide the class name of the module     #
-# binding with full namespace.                  #
-#                                               #
-# --------------------------------------------- #
+# +-------------------------------------------------------------------------+
+# |    modules.yaml                      Defining all additional modules    |
+# +-------------------------------------------------------------------------+
+# |                                                                         |
+# |  In this file you define all additional modules, which should be        |
+# |  loaded besides the core itself. Just provide the class name of         |
+# |  the module binding with full namespace.                                |
+# |                                                                         |
+# +-------------------------------------------------------------------------+
 
 modules:
   # Adds debug bar to views when debug mode is enabled

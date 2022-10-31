@@ -1,4 +1,13 @@
-# English translation file
-# Access it via C::Formatter()->translate('main:demo.hello', ['name' => 'Duke']) -> Hey Duke
+# +-------------------------------------------------------------------------+
+# |    en/main.yaml                        English main translation file    |
+# +-------------------------------------------------------------------------+
+# |                                                                         |
+# |  Add all your translations you need, including variables.               |
+# |  Access it similar to any other config value you need in your app:      |
+# |  `C::Formatter()->translate('main:demo.hello', ['name' => 'Duke']);`    |
+# |  Will print "Hey Duke" if config is "demo: hello: Hey {name}"           |
+# |                                                                         |
+# +-------------------------------------------------------------------------+
+
 demo:
   hello: Hey {name}
