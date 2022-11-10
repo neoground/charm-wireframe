@@ -26,10 +26,10 @@ class BasicController extends Controller
         ]);
     }
 
-    #[Route("GET", "/", "restricted", "auth")]
+    #[Route("GET", "/backend", "restricted", "auth")]
     public function getRestricted() : View
     {
-        return View::make('index')->with([
+        return View::make('backend.index')->with([
 
         ]);
     }
