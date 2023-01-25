@@ -13,6 +13,9 @@ logging:
   errors: true
   # Chmod for log files (optional)
   file_permissions: 0664
+  # Log level for LogOutput (TaskLogger module)
+  logoutput:
+    level: info
 
 # ---------------------------------------------------------------------------
 # :: Session
@@ -72,7 +75,7 @@ storages:
   #  path: ''
 
 # ---------------------------------------------------------------------------
-# Output
+# :: Output
 # ---------------------------------------------------------------------------
 output:
   # JSON output
@@ -85,7 +88,7 @@ output:
   error_view: '_base.error'
 
 # ---------------------------------------------------------------------------
-# Guard auth system
+# :: Guard auth system
 # ---------------------------------------------------------------------------
 guard:
   # Enable auth system (guard)?
@@ -106,7 +109,7 @@ guard:
   no_auth_route: no_auth
 
 # ---------------------------------------------------------------------------
-# Request specific
+# :: Request specific
 # ---------------------------------------------------------------------------
 request:
   # Force HTTPS in URL generation, even if HTTP request was detected?
@@ -115,7 +118,7 @@ request:
   base_url: https://example.com
 
 # ---------------------------------------------------------------------------
-# BarBeQueue queue system
+# :: BarBeQueue queue system
 # ---------------------------------------------------------------------------
 bbq:
   # Name prefix for redis keys
