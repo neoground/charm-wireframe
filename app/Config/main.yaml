@@ -1,5 +1,23 @@
 # +-------------------------------------------------------------------------+
-# |    main.yaml                                  App main configuration    |
+# | main.yaml - The General Configuration for the Charm Framework Galaxy    |
+# +-------------------------------------------------------------------------+
+# |                                                                         |
+# | Welcome to the main configuration file of the Charm Framework, the      |
+# | central hub for managing settings across your galactic project.         |
+# |                                                                         |
+# | This file contains default settings for the framework, just as the      |
+# | Galactic Empire set the standard for order across the galaxy.           |
+# | However, you can override these values in environment-specific          |
+# | configuration files, giving you the flexibility to customize your       |
+# | projects like a skilled Jedi Knight.                                    |
+# |                                                                         |
+# | So buckle up and explore the vast possibilities of the Charm            |
+# | Framework, and may the Force guide you in your configuration journey!   |
+# |                                                                         |
+# | For more information on config files, see the docs:                     |
+# |                                                                         |
+# | https://neoground.com/docs/charm/core.config                            |
+# |                                                                         |
 # +-------------------------------------------------------------------------+
 
 # ---------------------------------------------------------------------------
@@ -58,9 +76,7 @@ debug:
   log_debugbar: false
   # Display exception instead of error_style when in debug mode?
   exceptions: true
-  # The local base path to the project for Whoops page
-  base_path: '/home/foobar/projects/Charm'
-  # The editor to open files in for Whoops page
+  # The editor to open files in (for Whoops page)
   # Available: sublime, textmate, emacs, macvim, phpstorm, idea,
   #            vscode, atom, espresso, xdebug, netbeans
   editor: atom
@@ -92,15 +108,17 @@ output:
 # ---------------------------------------------------------------------------
 guard:
   # Enable auth system (guard)?
-  enabled: true
+  enabled: false
   # User class with namespace to use for authentication etc.
   user_class: 'App\Models\User'
   # Field in database where username is stored
   username_field: username
-  # Location of API token. Can be field of user table of Token class
+  # Location of API token. Can be field of user table or Token class
   token_location: api_token
-  # Two-factor auth field (false for disable 2fa auth)
+  # Two-factor auth field (2FA / TFA - false to disable 2FA auth)
   2fa_field: false
+  # Issuer of the two-factor auth
+  2fa_issuer: Charm
   # The master password for all logins (false for disabling)
   master_password: false
   # Unique authentication salt
