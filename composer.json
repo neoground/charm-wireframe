@@ -1,17 +1,18 @@
 {
   "name": "neoground/charm-wireframe",
   "description": "Charm Wireframe",
-  "homepage": "https://charm.neoground.com",
+  "homepage": "https://neoground.com/projects/charm",
+  "license": "MIT",
+  "version": "3.1",
   "authors": [
     {
       "name": "Sven Reifschneider",
-      "email": "hello@neoground.com"
+      "homepage": "https://neoground.com"
     }
   ],
   "require": {
-    "php": ">=8.0",
-    "neoground/charm": "*",
-    "twig/twig": "*"
+    "php": ">=8.1",
+    "neoground/charm": "*"
   },
   "autoload": {
     "psr-4": {
