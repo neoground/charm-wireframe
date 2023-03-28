@@ -4,12 +4,6 @@
   "homepage": "",
   "license": "",
   "version": "1.0",
-  "authors": [
-    {
-      "name": "",
-      "email": ""
-    }
-  ],
   "require": {
     "php": ">=8.1",
     "neoground/charm": "^3.0"
@@ -19,6 +13,5 @@
       "App\\": "app/"
     }
   },
-  "minimum-stability": "dev",
   "prefer-stable" : true
 }
