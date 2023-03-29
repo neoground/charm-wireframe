@@ -9,10 +9,13 @@
  *     / /\ \         CHARM FRAMEWORK
  *    / / /\ \        ENTRY POINT
  *   / / /\ \ \
- *  / /_/__\ \ \      The framework for the real world.
- * /_/______\_\/\     Welcome to Charm!
+ *  / /_/__\ \ \      The foundation of your
+ * /_/______\_\/\     intergalactic journey.
  * \_\_________\/
  *
+ * Welcome to Charm!
+ *
+ * Docs: https://neoground.com/docs/charm
  */
 
 /**--**--**--**--**--**--**--**--**--**--**--**--**
