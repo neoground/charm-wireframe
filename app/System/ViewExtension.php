@@ -1,12 +1,11 @@
 <?php
 /**
- * This file contains the global ViewExtension class
+ * This file contains the app specific ViewExtension class
  */
 
 namespace App\System;
 
-use Twig\Extension\AbstractExtension;
-use Twig\TwigFunction;
+use Charm\Vivid\Base\BasicViewExtension;
 
 /**
  * Class ViewExtension
@@ -15,41 +14,8 @@ use Twig\TwigFunction;
  *
  * @package App\System
  */
-class ViewExtension extends AbstractExtension
+class ViewExtension extends BasicViewExtension
 {
-    /**
-     * Set array of all functions to add to twig
-     *
-     * @return array|TwigFunction[]
-     */
-    public function getFunctions()
-    {
-        // Get all functions in this class
-        $methods = get_class_methods($this);
-
-        // Methods to ignore (from parent)
-        $ignore = [
-            'getTokenParsers',
-            'getNodeVisitors',
-            'getFilters',
-            'getTests',
-            'getFunctions',
-            'getOperators',
-            'getAdminMenu'
-        ];
-
-        $arr = [];
-
-        // Build array, remove twig methods
-        foreach($methods as $method) {
-            if(!in_array($method, $ignore)) {
-                $arr[$method] = new TwigFunction($method, [$this, $method]);
-            }
-        }
-
-        return $arr;
-    }
-
     /**
      * Get a random integer in a view (demo method)
      *
