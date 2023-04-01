@@ -1,4 +1,4 @@
-# Charm-Wireframe: The Boilerplate for Charm Framework Projects
+# The Boilerplate for Charm Framework Projects
 
 Welcome to the Charm-Wireframe, the foundation of your intergalactic journey in the
 [Charm Framework](https://github.com/neoground/charm) universe. This
