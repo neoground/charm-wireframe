@@ -6,7 +6,7 @@
 namespace App\System\EventListener;
 
 use Charm\Events\EventListener;
-use Charm\Vivid\Charm;
+use Charm\Vivid\C;
 
 /**
  * Class DemoEvent
@@ -31,6 +31,6 @@ class DemoEvent extends EventListener
      */
     public function fire()
     {
-        Charm::Logging()->info('Demo Event fired');
+        C::Logging()->info('Demo Event fired');
     }
 }

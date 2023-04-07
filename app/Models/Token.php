@@ -6,7 +6,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
-use Charm\Vivid\Charm;
+use Charm\Vivid\C;
 use Charm\Vivid\Model;
 
 /**
@@ -52,10 +52,10 @@ class Token extends Model
      */
     public static function getUniqueToken(string $type) : string
     {
-        $token = Charm::Token()->createToken();
+        $token = C::Token()->createToken();
 
         while (self::where('token', $token)->where('type', $type)->count() > 0) {
-            $token = Charm::Token()->createToken();
+            $token = C::Token()->createToken();
         }
 
         return $token;

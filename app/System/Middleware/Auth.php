@@ -5,7 +5,7 @@
 
 namespace App\System\Middleware;
 
-use Charm\Vivid\Charm;
+use Charm\Vivid\C;
 use Charm\Vivid\Kernel\Output\Json;
 
 /**
@@ -24,7 +24,7 @@ class Auth
      */
     public static function checkAuth()
     {
-        if(!Charm::Guard()->isLoggedIn()) {
+        if(!C::Guard()->isLoggedIn()) {
             // Got NO valid login
             // Return error message
             return Json::makeErrorMessage("User Authentication required", 401);
