@@ -101,7 +101,11 @@ output:
   # Error style (default, view, json, exception)
   error_style: view
   # Error view template
-  error_view: '_base.error'
+  error_view: _base.error
+  # Maintenance mode style (default, view, json)
+  maintenance_style: view
+  # Maintenance mode view template
+  maintenance_view: _base.maintenance
 
 # ---------------------------------------------------------------------------
 # :: Guard auth system
