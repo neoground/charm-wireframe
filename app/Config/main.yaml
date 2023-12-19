@@ -31,6 +31,8 @@ logging:
   errors: true
   # Chmod for log files (optional)
   file_permissions: 0664
+  # The amount of days the logs should be kept before deletion
+  keep_days: 90
   # Log level for LogOutput (TaskLogger module)
   logoutput:
     level: info
@@ -74,6 +76,8 @@ debug:
   show_debugbar: false
   # Log debugbar data for a history
   log_debugbar: false
+  # If debugbar data is logged, keep it for this amount of days
+  log_keep_days: 7
   # Display exception instead of error_style when in debug mode?
   exceptions: true
   # The editor to open files in (for Whoops page)
