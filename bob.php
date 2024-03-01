@@ -1,15 +1,28 @@
 <?php
 /**
- * This is the console named Bob!
+ * This file contains the beginning of terminal-based life.
  */
-set_time_limit(0);
-define("CLI_PATH", $argv[0]);
 
-// First we require our composer autoloader
+/**
+ *        __
+ *       /_/\
+ *      / /\ \         CHARM FRAMEWORK
+ *     / / /\ \        BINARY OPERATIONS BUTLER
+ *    / / /\ \ \
+ *   / /_/__\ \ \      This is the console,
+ *  /_/______\_\/\     named Bob.
+ *  \_\_________\/
+ *
+ *  Docs:  https://neoground.com/docs/charm/core.bob
+ */
+
+/**--**--**--**--**--**--**--**--**--**--**--**--**
+ *           Stay hungry, stay foolish            *
+ *  https://www.youtube.com/watch?v=UF8uR6Z6KLc   *
+ **--**--**--**--**--**--**--**--**--**--**--**--**/
+
+// Ignition: Require the composer autoloader
 require_once __DIR__ . '/vendor/autoload.php';
 
-// Then we include our basic configuration
-require_once __DIR__ . '/app/Engine.php';
-
-// Finally we start the console system
-Charm\Vivid\Kernel\Handler::getInstance()->startConsole();
+// Liftoff: Start and run the console
+Charm\Vivid\QuantumEngine::engageConsole($argv);
