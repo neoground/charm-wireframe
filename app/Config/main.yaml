@@ -84,6 +84,9 @@ debug:
   # Available: sublime, textmate, emacs, macvim, phpstorm, idea,
   #            vscode, atom, espresso, xdebug, netbeans
   editor: atom
+  # Should performance metrics be tracked in the app? See C::Performance().
+  # In debug mode this is always enabled.
+  metrics: true
 
 # ---------------------------------------------------------------------------
 # :: Storage
