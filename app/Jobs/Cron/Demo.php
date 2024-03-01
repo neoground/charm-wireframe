@@ -19,7 +19,7 @@ class Demo extends Cronjob
     /**
      * Cron job configuration
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this->setName('Demo command')
             ->runWeekly();
@@ -30,7 +30,7 @@ class Demo extends Cronjob
      *
      * @return bool
      */
-    public function run()
+    public function run(): bool
     {
         return true;
     }

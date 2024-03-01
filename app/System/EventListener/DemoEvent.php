@@ -29,8 +29,9 @@ class DemoEvent extends EventListener
     /**
      * Event execution
      */
-    public function fire()
+    public function fire(mixed $args = null): bool
     {
         C::Logging()->info('Demo Event fired');
+        return true;
     }
 }

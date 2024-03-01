@@ -33,7 +33,7 @@ class Demo extends Command
      */
     public function main(): bool
     {
-        $this->io->text('Hello world!');
+        $this->io->writeln('🚀 Hello world!');
         return true;
     }
 }
