@@ -5,9 +5,7 @@
 
 namespace App\Jobs\Console;
 
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
+use Charm\Bob\Command;
 
 /**
  * Class Demo
@@ -31,14 +29,11 @@ class Demo extends Command
     /**
      * The execution
      *
-     * @param InputInterface   $input
-     * @param OutputInterface  $output
-     *
-     * @return int
+     * @return bool
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    public function main(): bool
     {
-        $output->writeln("Hello world!");
-        return self::SUCCESS;
+        $this->io->text('Hello world!');
+        return true;
     }
 }
