@@ -5,7 +5,7 @@
 
 namespace App\Models;
 
-use Charm\Vivid\Model;
+use Charm\Vivid\Base\UserModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Schema\Blueprint;
 
@@ -16,7 +16,7 @@ use Illuminate\Database\Schema\Blueprint;
  *
  * @package App\Models
  */
-class User extends Model
+class User extends UserModel
 {
     /** @var string table name */
     protected $table = 'users';
@@ -62,7 +62,7 @@ class User extends Model
      *
      * @return self
      */
-    public static function getDefaultUser()
+    public static function getDefaultUser(): self
     {
         return self::where('username', 'system')->first();
     }
@@ -72,7 +72,7 @@ class User extends Model
      *
      * @return string
      */
-    public function getDisplayName()
+    public function getDisplayName(): string
     {
         return $this->username;
     }
@@ -85,7 +85,7 @@ class User extends Model
      *
      * @return string
      */
-    public function getLanguage()
+    public function getLanguage(): string
     {
         return 'en';
     }
