@@ -87,6 +87,8 @@ debug:
   # Should performance metrics be tracked in the app? See C::Performance().
   # In debug mode this is always enabled.
   metrics: true
+  # Cache data even when debug mode is enabled?
+  cache_enabled: true
 
 # ---------------------------------------------------------------------------
 # :: Storage
