@@ -138,6 +138,14 @@ guard:
   auth_salt: 'REPLACE-WITH-YOUR-OWN'
   # The route to redirect to in case of no auth ("guard:auth" route filter)
   no_auth_route: no_auth
+  # Remove failed login attempts of a client after 24 hours = 1440 minutes
+  login_attempts_expiration: 1440
+  # Amount of wrong login attempts needed for throttling
+  throttle_threshold: 5
+  # Delay in seconds after reaching throttle threshold
+  throttle_seconds: 10
+  # Maximum login attempts before an IP is blocked until attempts expire
+  max_login_attempts: 20
 
 # ---------------------------------------------------------------------------
 # :: Request specific
