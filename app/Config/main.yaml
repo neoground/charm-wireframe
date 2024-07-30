@@ -47,6 +47,10 @@ session:
   name: charm
   # Default language for translations
   default_language: en
+  # List of available languages
+  available_languages:
+    - de
+    - en
 
 # ---------------------------------------------------------------------------
 # :: Localization
