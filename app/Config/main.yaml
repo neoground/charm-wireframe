@@ -45,6 +45,12 @@ session:
   expire: 1440
   # Name of session
   name: charm
+  # Garbage collector
+  gc:
+    # Enabled? If disabled you must clean up your session files manually
+    enabled: true
+    # The chance of garbage collection on request (1/$val, e.g. 100 = 1%, 10 = 10%)
+    divisor: 100
   # Default language for translations
   default_language: en
   # List of available languages
