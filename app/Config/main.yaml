@@ -69,8 +69,8 @@ local:
   # Format: https://momentjs.com/docs/#/displaying/format/
   timestamps:
     date:          'DD. MMMM YYYY'
-    dateshort:     'DD.MM.YY'
-    datetimeshort: 'DD.MM.YYYY HH:mm'
+    dateshort:     'DD. MMM YY'
+    datetimeshort: 'DD. MMM YYYY HH:mm'
   # Text formatting of numbers
   formatting:
     decimal: ','
