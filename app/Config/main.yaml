@@ -36,6 +36,13 @@ logging:
   # Log level for LogOutput (TaskLogger module)
   logoutput:
     level: info
+  default_logger: charm
+  # Custom loggers
+  loggers:
+    redis:
+      type: redis
+      key: log
+      level: info
 
 # ---------------------------------------------------------------------------
 # :: Session
