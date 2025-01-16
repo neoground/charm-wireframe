@@ -1,0 +1,9 @@
+[Unit]
+Description=Run cron for charm project
+
+[Service]
+Type=forking
+User=www-data
+StandardOutput=journal
+StandardError=journal
+ExecStart=php /var/www/.../bob.php cron:run
