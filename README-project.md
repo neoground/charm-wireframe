@@ -17,7 +17,7 @@ Just follow these simple steps, and you'll be coding with the Force on your side
    ```
 3. Create necessary directories: Ensure the var/cache, var/logs, and data directories are in place.
    ```bash
-   mkdir var/cache var/logs data
+   mkdir -p var/cache var/logs data
    ```
 4. Set permissions: If your web server runs as a different user, grant read, write, and execute permissions to the directories.
    ```bash
@@ -34,7 +34,10 @@ Just follow these simple steps, and you'll be coding with the Force on your side
 7. Install additionally needed packages depending on your project, like `npm install` for your node assets
 8. Configure web server: Update your Apache or Nginx configuration to handle rewrites to the `index.php` file.
    For apache2 you can find a `.htaccess` and for nginx a `nginx.conf` file in this repository.
-9. Open the new project in your browser or run a development server with `bob serve`.
+9. If your project uses cron or the queue, make sure the commands are executed regularly, like `bob cron:run`.
+   It is recommended to run the cron / queue daemon on linux hosts, but you can also use a classic systemd service
+   or crontab. See `var/Services` for examples, including Initrc + OpenRC.
+10. Open the new project in your browser or run a development server with `bob serve`.
 
 For more information on setting up a charm project, see the [Charm Installation Guide](https://neoground.com/docs/charm/start.installation).
 

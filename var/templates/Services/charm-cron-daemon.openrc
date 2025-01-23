@@ -1,0 +1,28 @@
+#!/sbin/openrc-run
+
+name="Charm Cron Daemon"
+description="Cron daemon for charm project"
+command="/usr/bin/php"
+command_args="/var/www/.../bob.php cron:daemon start"
+command_background="yes"
+pidfile="/run/charm-cron.pid"
+user="www-data"
+
+depend() {
+    need net
+}
+
+start_pre() {
+    checkpath --directory /run --owner $user
+}
+
+stop() {
+    ebegin "Stopping $name"
+    start-stop-daemon --stop --pidfile $pidfile --signal SIGINT
+    eend $?
+}
+
+restart() {
+    svc_stop
+    svc_start
+}
