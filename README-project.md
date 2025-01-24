@@ -36,7 +36,8 @@ Just follow these simple steps, and you'll be coding with the Force on your side
    For apache2 you can find a `.htaccess` and for nginx a `nginx.conf` file in this repository.
 9. If your project uses cron or the queue, make sure the commands are executed regularly, like `bob cron:run`.
    It is recommended to run the cron / queue daemon on linux hosts, but you can also use a classic systemd service
-   or crontab. See `var/Services` for examples, including Initrc + OpenRC.
+   or crontab. See `var/Services` for examples, including Initrc + OpenRC. You can also easily create a default
+   systemd service for the cron daemon via `bob cron:info systemd`.
 10. Open the new project in your browser or run a development server with `bob serve`.
 
 For more information on setting up a charm project, see the [Charm Installation Guide](https://neoground.com/docs/charm/start.installation).
