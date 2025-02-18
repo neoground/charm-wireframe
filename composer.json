@@ -11,8 +11,8 @@
     }
   ],
   "require": {
-    "php": ">=8.1",
-    "neoground/charm": "^3.5"
+    "php": ">=8.3",
+    "neoground/charm": "^3.6"
   },
   "autoload": {
     "psr-4": {
