@@ -163,6 +163,9 @@ guard:
   throttle_seconds: 10
   # Maximum login attempts before an IP is blocked until attempts expire
   max_login_attempts: 20
+  # Keys for Authentication header (Default: Authentication: usertoken="foobar" client="123456")
+  user_token_key: 'usertoken'
+  client_token_key: 'client'
 
 # ---------------------------------------------------------------------------
 # :: Request specific
