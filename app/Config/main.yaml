@@ -1,23 +1,5 @@
 # +-------------------------------------------------------------------------+
-# | main.yaml - The General Configuration for the Charm Framework Galaxy    |
-# +-------------------------------------------------------------------------+
-# |                                                                         |
-# | Welcome to the main configuration file of the Charm Framework, the      |
-# | central hub for managing settings across your galactic project.         |
-# |                                                                         |
-# | This file contains default settings for the framework, just as the      |
-# | Galactic Empire set the standard for order across the galaxy.           |
-# | However, you can override these values in environment-specific          |
-# | configuration files, giving you the flexibility to customize your       |
-# | projects like a skilled Jedi Knight.                                    |
-# |                                                                         |
-# | So buckle up and explore the vast possibilities of the Charm            |
-# | Framework, and may the Force guide you in your configuration journey!   |
-# |                                                                         |
-# | For more information on config files, see the docs:                     |
-# |                                                                         |
-# | https://neoground.com/docs/charm/core.configuration                     |
-# |                                                                         |
+# | main.yaml - General Configuration                                       |
 # +-------------------------------------------------------------------------+
 
 # ---------------------------------------------------------------------------
